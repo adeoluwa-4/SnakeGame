@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KSU.CIS300.Snake.Game">
+    <Position X="0.5" Y="3.25" Width="2" />
+    <AssociationLine Name="LastDirection" Type="KSU.CIS300.Snake.Direction">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.245" Y="0.193" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="KeyPress" Type="KSU.CIS300.Snake.Direction">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.398" Y="0.216" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Status" Type="KSU.CIS300.Snake.SnakeStatus">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.065" Y="-0.25" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAEAAAAgggIIISAAAAYgAAAAAQIwAAAACAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LastDirection" />
+      <Property Name="KeyPress" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="KSU.CIS300.Snake.GameBoard">
+    <Position X="3" Y="3.25" Width="1.75" />
+    <Members>
+      <Field Name="_halfSize" Hidden="true" />
+      <Method Name="GetAdjacent" Hidden="true" />
+      <Method Name="GetOpposit" Hidden="true" />
+      <Method Name="MarkVisted" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Grid" Type="KSU.CIS300.Snake.GameNode" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="3.639" />
+        <Point X="5.125" Y="3.639" />
+        <Point X="5.125" Y="3.688" />
+        <Point X="5.75" Y="3.688" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.266" Y="0.031" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Head" Type="KSU.CIS300.Snake.GameNode" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="3.918" />
+        <Point X="5.75" Y="3.918" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.187" Y="0.008" Height="0.182" Width="0.728" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Tail" Type="KSU.CIS300.Snake.GameNode" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="4.196" />
+        <Point X="5.75" Y="4.196" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.29" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Food" Type="KSU.CIS300.Snake.GameNode" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="3.375" />
+        <Point X="5.75" Y="3.375" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.074" Y="0.192" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAAAgABAAgAAOBgAAQAAAQAAAQAACAAABICEgIAEAE=</HashCode>
+      <FileName>GameBoard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Grid" />
+      <Property Name="Head" />
+      <Property Name="Tail" />
+      <Property Name="Food" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KSU.CIS300.Snake.GameNode">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <AssociationLine Name="Data" Type="KSU.CIS300.Snake.GridData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="2.25" />
+        <Point X="6.75" Y="1.562" />
+        <Point X="6.25" Y="1.562" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.227" Y="0.1" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAABAAAAAAAABAAAAAAAAAAYAA=</HashCode>
+      <FileName>GameNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Data" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KSU.CIS300.Snake.UserInterface">
+    <Position X="5" Y="4.5" Width="2.75" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_game" Type="KSU.CIS300.Snake.Game">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.922" Y="-0.285" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EIAAAAgAhCAEhQAgAAKAAIACDQAAIAABpMAIACIIAAQ=</HashCode>
+      <FileName>UserInterface.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_game" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="KSU.CIS300.Snake.Direction">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAEAAAI=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="KSU.CIS300.Snake.SnakeStatus">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAIAAAAAAAEAAAAAAAAAAAAAAAAAAACAAIAA=</HashCode>
+      <FileName>GameBoard.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="KSU.CIS300.Snake.GridData">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAIAAAAAAAAAAAAAAAAAABgAAAA=</HashCode>
+      <FileName>GameNode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
